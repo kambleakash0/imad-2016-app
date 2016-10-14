@@ -19,7 +19,7 @@ var articleOne = {
         <p>
             This is the main content.This is the main content.This is the main content.
         </p>`
-}
+};
 
 function createTemplate(data){
     var title=data.title;
