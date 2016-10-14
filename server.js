@@ -17,7 +17,7 @@ var articles = {
     },
     'article-two':{
         title:'Article Two | AK',
-        date:'15 Oct, 2016',
+        date:'16 Oct, 2016',
         heading:'Article Two',
         content:`
             <p>
@@ -26,7 +26,7 @@ var articles = {
     },
     'article-three':{
         title:'Article Three | AK',
-        date:'15 Oct, 2016',
+        date:'17 Oct, 2016',
         heading:'Article Three',
         content:`
             <p>
