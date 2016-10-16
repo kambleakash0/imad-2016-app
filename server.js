@@ -43,12 +43,6 @@ var articleOne = {
         </p>`
 };
 
-var names=[];
-app.get('/submit-name/:name', function (req, res){
-  var name=req.query.name;
-  names.push(name);
-  res.send(JSON.stringify(names));
-});
 
 function createTemplate(data){
     var title=data.title;
@@ -99,6 +93,13 @@ app.get('/', function (req, res) {
 
 app.get('/article-hundred', function (req, res) {
   res.send('This is just a test');
+});
+
+var names=[];
+app.get('/submit-name/:name', function (req, res){
+  var name=req.query.name;
+  names.push(name);
+  res.send(JSON.stringify(names));
 });
 
 app.get('/:articleName',function(req,res){
