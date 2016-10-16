@@ -43,6 +43,13 @@ var articleOne = {
         </p>`
 };
 
+var names=[];
+app.get('/submit-name/:name', function (req, res){
+  var name=req.query.name;
+  names.push(name);
+  res.send(JSON.stringify(names));
+});
+
 function createTemplate(data){
     var title=data.title;
     var date=data.date;
@@ -82,12 +89,6 @@ app.get('/counter',function(req,res){
     res.send(counter.toString());
 });
 
-var names=[];
-app.get('/submit-name/:name', function (req, res){
-  var name=req.query.name;
-  names.push(name);
-  res.send(JSON.stringify(names));
-});
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
